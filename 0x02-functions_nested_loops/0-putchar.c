@@ -1,36 +1,15 @@
-#include <stdio.h>
-#include "main.h"
+#include <unistd.h>
 /**
- * main - Entry point
+ * main - prints _putchar
  *
- * Description: A program that prints _putchar
+ * Description: this program prints _putchar
  *
- * Return: Always 0 Success
- */
+ *  Return:  0 means  (Success)
+ **/
 int main(void)
 {
-	printf("_putchar\n");
-
-	return (0);
+char text[] = "_putchar\n";
+int length = sizeof(text) - 1;
+write(1, text, length);
+return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

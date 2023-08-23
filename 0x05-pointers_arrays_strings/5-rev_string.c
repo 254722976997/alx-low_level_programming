@@ -1,17 +1,29 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - program to check
+ * rev_string - Prints a string in reverse.
+ * @s: Variable string.
  *
- * Return: Always 0 (Success)
+ * Return: Always void.
  */
-int main(void)
+void rev_string(char *s)
 {
-	char s[10] = "My School";
+	int n, i;
+	char *end_ptr, ch;
 
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
+	end_ptr = s;
+
+	for (n = 0 ; *end_ptr != '\0' ; n++)
+	{
+		end_ptr++;
+	}
+	end_ptr = end_ptr - 1;
+
+	for (i = 0; i < n / 2 ; i++)
+	{
+		ch = *end_ptr;
+		*end_ptr = *(s + i);
+		*(s + i) = ch;
+		end_ptr--;
+	}
 }

@@ -2,7 +2,11 @@
 #include <stdio.h>
 
 /**
+<<<<<<< HEAD
  * main -  to check the code.
+=======
+ * main - check the code.
+>>>>>>> 022597795a4edbe00a8152ad627af531054bb51e
  *
  * Return: Always 0.
  */

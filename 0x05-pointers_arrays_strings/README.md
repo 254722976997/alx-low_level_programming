@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0x04. C - pointers, arrays and strings
 Description
 
@@ -106,3 +107,6 @@ Create a program that generates random valid passwords for the program 101-crack
     gdb and objdump can help
 
 File: 101-keygen.c
+=======
+My 0x05 tasks readme
+>>>>>>> 7966964f8ab85e8e3c4a88eaeef4a97506570c89

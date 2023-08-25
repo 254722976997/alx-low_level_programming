@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 
 /**
  * puts_half - Prints a string.
@@ -29,4 +30,32 @@ void puts_half(char *str)
 		}
 	}
 	_putchar(10);
+=======
+#include <stdio.h>
+
+/**
+ * puts_half - Prints econd half a string
+ *
+ * @str : pointers to a string
+ * Reurn: Always 0 (Success)
+ */
+void puts_half(char *str)
+{
+	int length = 0;
+	int i;
+	int start;
+
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+
+	start = (length + 1) / 2;
+
+	for (i = start; i < length; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
+>>>>>>> 7966964f8ab85e8e3c4a88eaeef4a97506570c89
 }

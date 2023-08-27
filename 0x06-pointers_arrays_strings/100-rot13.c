@@ -1,15 +1,27 @@
 #include "main.h"
-#include <string.h>
-	/**
-	**_strncat - Entry point
-	*@dest: - string input
-	*@src: - string input
-	*@n: - number of bytes
-	*concatenates two strings.
-	* Return: Always 0.
-	*/
-	char *_strncat(char *dest, char *src, int n)
+
+/**
+ * rot13 - encodes a string with the rot13 cipher
+ * @a: Pointer to array to be converted
+ *
+ * Return: Array encoded in rot13 cipher
+ */
+char *rot13(char *a)
+{
+	int i, j;
+	char alpha[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
+	char ch[] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
+
+	for (i = 0 ; a[i] != '\0' ; i++)
 	{
-		strncat(dest, src, n);
-		return (dest);
+		for (j = 0 ; j <= 52 ; j++)
+		{
+			if (a[i] == alpha[j])
+			{
+				a[i] = ch[j];
+				break;
+			}
+		}
 	}
+	return (a);
+}

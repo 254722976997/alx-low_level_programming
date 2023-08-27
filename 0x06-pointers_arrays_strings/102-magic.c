@@ -4,7 +4,7 @@
  * main - entry pont
  * Description: just some code
  *
- * Retrn: ) ALways (Success)
+ * Return: 0  ALways (Success)
  */
 
 int main(void)
@@ -16,7 +16,7 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 /**
- *
+ * main - entry point
  * write your line of code here...
  * Remember:
  * - you are not allowed to use a

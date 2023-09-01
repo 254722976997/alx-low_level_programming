@@ -1,40 +1,39 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* main - positive numbers added
-* @argc: command line arguments numbers
-* @argv: array of all parameters
-* atoi: function that converts string numbers to integers
-* Return: Always success (0)
+* main - Program that add two positive numbers
+* @argc: Number of command lines arguments.
+* @argv: Char of arrays.
+*
+* Return: 0 when both numbers pass or 1 for error, when aren't digits
 */
-
 int main(int argc, char *argv[])
 {
 	int i, j;
-	int add = 0;
+	unsigned long int sum = 0;
 
-	if (argc < 1)
+	if (argc == 1)
 	{
-		return (0);
+		printf("0\n");
 	}
-	for (i = 1; i < argc; i++)
+	else if (argc > 1)
 	{
-		j = 0;
-
-		while (argv[i][j])
+		for (i = 1; i < argc; i++)
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			for (j = 0; *(argv[i] + j) != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (argv[i][j] >= '0' && argv[i][j] <= '9')
+					continue;
+				else
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			j++;
+			sum += atoi(argv[i]);
 		}
-		add = add + atoi(argv[i]);
+		printf("%lu\n", sum);
 	}
-	printf("%d\n", add);
-
 	return (0);
 }

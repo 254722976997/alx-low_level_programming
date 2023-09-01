@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
-* main - prints the number of arguments passed into it.
-* @argc: represents the number of command line arguments.
+* main - prints the number of arguments passed into it
+* @argc: represents the number of command line arguments
 * @argv: array of char pointers (contains all parameters.)
 * Return: Always success (0)
 */

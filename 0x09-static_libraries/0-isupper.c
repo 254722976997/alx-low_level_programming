@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isupper - check for uppercase char.
+ * _isupper - check upper char.
  * @c: a char argument
  *
  *Return: 1 if c is uppercase. 0 otherwise.

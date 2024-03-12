@@ -1,17 +1,14 @@
-#include <unistd.h>
-
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints "and that piece of art is useful" - Dora Korpar, 2015-10-19",
+ *                followed by a new line, to standard error.
  *
- * Description using the puts function
- * Return: 1 (failure)
+ * Return: Always 1.
  */
+
 int main(void)
 {
-	char str1[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-
-	write(2, str1, 59);
-		return (1);
+	fprintf(stderr, "and that piece of art is useful\" - Dora Korper, 2015-10-19\n");
+	return (1);
 }

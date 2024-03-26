@@ -1,17 +1,16 @@
+#include "main.h"
+
 /**
- * _islower - function takes an int
- * and sees if it corresponds to lowercase letter
- *
- * @c: input c int for searching in ascii table
- *
- * Return: the number 0 or 1 (upper and lower)
- *
+ *_islower - checks for a lowercase character
+ *@c: letter being tested
+ * Return: Always 0
  */
-int _islower(char c)
+
+int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
-	{
+	if  (c >= 97 && c <= 122)
 		return (1);
-	}
-	return (0);
+	else
+		return (0);
+
 }

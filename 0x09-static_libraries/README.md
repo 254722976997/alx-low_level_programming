@@ -1,1 +1,1 @@
-0x09 - static libraries
+project_static library

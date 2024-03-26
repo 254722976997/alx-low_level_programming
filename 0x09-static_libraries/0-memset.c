@@ -1,22 +1,20 @@
 #include "main.h"
+
 /**
- * _memset - fills the first n bytes of memory pointed by s
- * with the value of b
- *
- * @s: processed string
- * @b: overwrite value
- * @n: bytes number to overwrite
- *
- * Return: strings processed
+ * _memset -fill memory with constant values
+ * @s: pointer to char params
+ * @b: constant byte
+ * @n: byte of mem area
+ * Return: *s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int pos;
+	unsigned int i;
 
-	for (pos = 0; pos < n; pos++)
+	for (i = 0; i < n; i++)
 	{
-		s[pos] = b;
+	s[i] = b;
 	}
-
 	return (s);
 }

@@ -1,20 +1,19 @@
 #include "main.h"
+
 /**
- * _strlen - this function takes string pointer and returns
- * the lenght
+ * _strlen - Count the numbers of characters in a string.
+ * @p: Variable string.
  *
- * @s: pointer to string
- *
- * Return: number of indexes
+ *Return: Always void.
  */
-int _strlen(char *s)
+int _strlen(char *p)
 {
-	int lenght = 0;
+	int n = 0;
 
-	while (*(s + lenght) != 0)
+	while (*p != '\0')
 	{
-		lenght++;
+		n++;
+		p++;
 	}
-
-	return (lenght);
+	return (n);
 }

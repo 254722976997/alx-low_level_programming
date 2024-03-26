@@ -1,23 +1,25 @@
 #include "main.h"
+
 /**
- * _strncpy - copies src string into dest string
- * up to n size.
+ * *_strncpy - function that copies the string pointed to by src.
+ * @dest: array name.
+ * @src: elements of the array.
+ * @n: amount of bytes of src array.
  *
- * @dest: string destination
- * @src: source string
- * @n: max numbers of the string copied
- *
- * Return: changed dest
+ * Return: Array of characters.
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int pos_dest;
+	int i = 0;
 
-	for (pos_dest = 0; pos_dest < n && src[pos_dest] != 0; pos_dest++)
-		dest[pos_dest] = src[pos_dest];
-
-	for (; pos_dest < n; pos_dest++)
-		dest[pos_dest] = 0;
-
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	for (; i < n ; i++)
+	{
+		dest[i] = '\0';
+	}
 	return (dest);
+	_putchar('\n');
 }
